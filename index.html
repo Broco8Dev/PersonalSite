@@ -34,10 +34,24 @@
             background-color: #00000094;
             border-radius: 15px;
             padding: 20px;
-            position: absolute;
+            position: relative;
             text-align: center;
             box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin: 100px;
         }
+
+        .rounded-rectangle-sub {
+            background-color: #00000094;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin: 100px;
+        }
+
 
         .button {
             border: none;
@@ -105,6 +119,40 @@
             -webkit-text-fill-color: transparent;
             animation: shine 3s linear infinite;
         }
+
+        h5 {
+            font-family: "Nunito", Arial, sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, #6441ff 20%, rgb(144, 59, 255) 40%, rgb(130, 96, 255) 60%, #6441ff 80%);
+            background-size: auto 200%;
+            color: #000;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        h4{
+            font-family: "Nunito", Arial, sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, #6441ff 20%, rgb(144, 59, 255) 40%, rgb(130, 96, 255) 60%, #6441ff 80%);
+            background-size: auto 200%;
+            color: #000;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
         
         
 
@@ -135,6 +183,18 @@
 </head>
 <body>
     <canvas id="gradient-canvas"></canvas>
+    <div class="rounded-rectangle-sub">
+        <h4>About Me</h4>
+        <h2>Hey, my name is BrocoDev!<br>
+            I started coding when I was young<br>
+            and have fallen in love ever since.<br>
+            I started with game development in Scratch,<br>
+            then moved my way into Unity,<br>
+            and then started learning about iOS App<br>
+            and Web Development.<br>
+            I am currently working on an<br>
+            iOS toolbox called Flux.</h2>
+    </div>
     <div class="rounded-rectangle">
         <h1>BrocoDev</h1>
         <button class="button button1" onclick="window.open('https://github.com/Broco8Dev')">Github</button>
@@ -145,6 +205,38 @@
         <h2>🌏 | Canadian & Lebanese</h2>
         <h2>📙 | English & Francais</h2>
         <h2>📅 | 14 Years Old</h2>
+    </div>
+    <div class="rounded-rectangle-sub">
+        <h4>Projects</h4>
+        <br>
+        <h5>Flux</h5>
+
+        <h2>
+        A No-Exploit iOS Customization Toolbox
+        </h2>
+
+        <h5>Welcome to the Backrooms</h5>
+
+        <h2>
+        A Quick, Lore-based Game about the Backrooms.
+        </h2>
+
+        <h5>Wild Woods</h5>
+
+        <h2>
+        A Week-Long, Group Game Projects
+        </h2>
+
+        <h5>Sandstorm</h5>
+
+        <h2>
+        A Lore & Action Based 3D Open World.
+        </h2>
+
+        <h5>& Other Miscellaneous Games...</h5>
+        <br>
+        <h2>Most of these Projects can be <br> found on my itch.io or GitHub!</h2>
+        
     </div>
     <script>
         function normalizeColor(n){return[(n>>16&255)/255,(n>>8&255)/255,(255&n)/255]}["SCREEN","LINEAR_LIGHT"].reduce((n,t,i)=>Object.assign(n,{[t]:i}),{});class MiniGl{constructor(n,t,i,s=!1){let o=this,r=-1!==document.location.search.toLowerCase().indexOf("debug=webgl");o.canvas=n,o.gl=o.canvas.getContext("webgl",{antialias:!0}),o.meshes=[];let a=o.gl;t&&i&&this.setSize(t,i),o.lastDebugMsg,o.debug=s&&r?function(n){let t=new Date;t-o.lastDebugMsg>1e3&&console.log("---"),console.log(t.toLocaleTimeString()+Array(Math.max(0,32-n.length)).join(" ")+n+": ",...Array.from(arguments).slice(1)),o.lastDebugMsg=t}:()=>{},Object.defineProperties(o,{Material:{enumerable:!1,value:class{constructor(n,t,i={}){let s=this;function r(n,t){let i=a.createShader(n);return a.shaderSource(i,t),a.compileShader(i),a.getShaderParameter(i,a.COMPILE_STATUS)||console.error(a.getShaderInfoLog(i)),o.debug("Material.compileShaderSource",{source:t}),i}function l(n,t){return Object.entries(n).map(([n,i])=>i.getDeclaration(n,t)).join("\n")}s.uniforms=i,s.uniformInstances=[];let d="\n              precision highp float;\n            ";s.vertexSource=`
